@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&family=Prosto+One&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: rgb(5, 5, 98);
+            color: white;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(22, 22, 77);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 2rem;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: lavender;
+            font-size: 1.01rem;
+        }
+        .left{
+            font-size: 2rem;
+        }
+        .firstsection{
+            display: flex;
+            justify-content: space-around;
+            margin: 23px 0;
+            align-items: center;
+        }
+        .firstsection > div{
+            width: 40%;
+        }
+        .leftsection{
+            font-size: 2.5rem;
+            margin: auto;
+        }
+        .rightsection img{
+            width: 100%;
+        }
+        .purple{
+            color: rgb(84, 11, 192);
+        }
+        .text-gray{
+            color: gray;
+        }
+        .secondsection{
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+        main hr{
+            border:0 ;
+            background: rgb(75, 14, 197);
+            height: 2px;
+            margin: 40px 84px;
+        }
+        .secondsection h1{
+            font-size: 1.9rem;
+        }
+        .secondsection .box{
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+        .secondsection .vertical{
+            height: 100px;
+            width:1px;
+            background-color: white;
+            margin: 0 6.5vw;
+        }
+        .image-top{
+            width: 25px;
+            position: relative;
+            top: -28px;
+            left: -14px;
+        }
+        .vertical-title{
+            position: relative;
+            top: 70px;
+        }
+        .vertical-desc{
+            position: relative;
+            top: 80px;
+            width: 130px;
+            font-size: 12px;
+            color: rgb(158, 155, 155);
+        }
+        footer{
+            background-color: #0e0e1a;
+            padding: 15px;
+            
+        }
+        .footer{
+            display: flex;
+            margin: 20px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footer >div{
+            width: 200px;
+        }
+        .footer-rights{
+            text-align: center;
+            color: grey;
+        }
+        .btn{
+            background-color: rgb(41, 9, 148);
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 3px;
+            color: white;
+        }
+        .buttons{
+            padding: 30px;
+        }
+        
+
+        .p_heading{
+            font-size: 1.9rem;
+            font-weight: bolder;
+        }
+        
+        
+        
+
+            
+            /* about */
+        .a_section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 0;
+            /* height: 100vh; */
+        }
+        .a_about{
+            margin: 0 175px;
+        }
+        .a_left-section{
+            width: 40vw;
+            height: 80vh;
+            /* background-color: brown; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .a_left-section img{
+            width: 30vw;
+            height: 40vw;
+            box-shadow: 10px 10px 100px blue;
+            border-radius: 10px;
+        }
+        .a_right-section{
+            width: 40vw;
+            height: 80vh;
+            /* background-color: blueviolet; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .a_right-head{
+            font-size: 80px;
+            margin: 10px 0;
+        }
+        .a_right-head2{
+            font-size: 30px;
+            margin: 5px 0;
+        }
+        .a_btn{
+            background-color: blue;
+            margin: 20px 0;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        .a_btn a{
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bolder;
+            color: aliceblue;
+        }
+        
+
+
+        /* service */
+
+        .s_section{
+            margin: 60px;
+            height: 100vh;
+        }
+        .s_service_img{
+            height: 30px;
+            width: 30px;
+        }
+        .s_context{
+            display: flex;
+            justify-content: center ;
+            flex-wrap: wrap;
+        }
+        .s{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid blue;
+            margin: 10px;
+            padding: 10px;
+            flex-wrap: wrap;
+        }        
+        .s_service_d{
+            font-size: 10px;
+        }
+
+        /* contact */
+
+        .c_left{
+            font-size: 2rem;
+        }
+
+        .c_section{
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;   
+            margin: 40px 0;
+            
+        }
+        .c_left-section{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 40%;
+            height: 100vh;
+        
+        }
+        .c_left-head{
+            font-size: 50px;
+            color: rgb(110, 13, 207);
+        }
+        
+        .c_right-section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 40%;
+            height: 100vh;    
+        }
+        .c_right-head{
+            font-size: 60px;
+            color: rgb(110, 13, 207);
+        }
+        .c_full-form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .c_form p{
+            font-size: 10px;
+            color: rgba(50, 44, 44, 0.483);
+        }
+        .contact-form{
+            padding: 5px;
+            margin: 6px 0;
+            width: -moz-available;
+            box-shadow: 10px 10px blue;
+        }
+        .c_submit{
+            padding: 10px 15px;
+            margin: 20px;
+            font-size: 16px;
+            box-shadow: 3px 3px 3px blue;
+        }
+
+
+
+
+
+
+
+        @media screen and (max-width: 1000px) {
+            .firstsection{
+                flex-direction: column-reverse;
+            }
+            .secondsection .vertical{
+                height: unset;
+            }
+            .box{
+                flex-direction: column;
+            }
+            .vertical-title , .vertical-desc{
+                left: 45px;
+            }
+            
+            .secondsection .box{
+                width: 50vw;
+            }
+            nav{
+                flex-direction: column;
+            }
+            .leftsection{
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .rightsection{
+                width: 321px !important;
+            }
+            .secondsection{
+                max-width: 80vw;
+                margin: auto;
+                height: 240vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-top{
+                top: 128px;
+            }
+            body{
+                min-width: fit-content;
+            }
+            .footer-second,.footer-third,.footer-fourth{
+                width: 8vh !important;
+                display: flex;
+                flex-direction: column;
+            }
+            .a_right-head{
+                font-size: 30px !important;
+                margin: 0;
+            }
+            .a_right-head2{
+                font-size: 20px !important;
+                margin: 0;
+            }
+            .a_right-desc{
+                font-size: 12px;
+            }
+            .a_section{
+                display: flex;
+                flex-direction: column;
+            }
+            .s_section{
+                height: 110vh!important;
+
+            }
+            .a_left-section{
+                width: 80vw !important;
+            }
+            .a_left-section img{
+                width: 70vw;
+                height: 80vw;
+            }
+            .a_right-section{
+                align-items: center;
+                width: 60vw;
+            }
+            .c_section{
+                display: flex;
+                flex-direction: column;
+            }
+            .c_left-section{
+                height: 20vh;
+                width: auto;
+            }
+            .c_right-section{
+                height: 80vh;
+            }
+            .c_left-head{
+                font-size: 25px;
+            }
+            .c_left-para1 , .c_left-para2{
+                font-size: 15px;
+                color: rgb(211, 204, 204);
+            }
+            
+            
+        }
+        @media screen and (max-width: 650px){
+            .s_section{
+                height: 127vh!important;
+    
+            }
+            .rightsection{
+                width: auto;
+            }
+            .leftsection{
+                font-size: 18px;
+            }
+            nav ul li{
+                margin: 0 1vh;
+            }
+            .leftsection .btn{
+                padding: 3px;
+                font-size: 12px;
+            }
+            .footer{
+                font-size: 12px;
+                width: 90vw;
+                padding: 1px ;
+                margin: 1px;
+            }
+            .footer-rights{
+                font-size: 10px;
+            }
+            .a_section{
+                display: flex;
+                flex-direction: column;
+            }
+            .a_left-section img {
+                width: 79vw;
+                height: 60vw;
+            }.a_left-section {
+                width: 40vw;
+                height: 50vh;
+            }
+            .a_right-section {
+                width: 60vw;
+                height: 80vh;
+            }
+            
+            .a_left-section img{
+                width: 70vw;
+                height: 80vw;
+            }
+            .a_left-section{
+                margin: 20px;
+                height: 400px !important;
+            }
+            .a_about{
+                margin: 0 60px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .c_left-section{
+                width: 60vw;
+            }
+            /* display: flex; */
+            /* justify-content: center; */
+            /* flex-direction: column; */
+}
+@media screen and (max-width: 450px){
+    .a_section{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        font-size: 12px ;
+            }
+            .footer > div{
+                width: 15vw;
+                font-size: 10px;
+            }
+            .footer-second,.footer-third,.footer-fourth{
+                font-size: 8px !important;
+            }
+            nav ul li a:hover{
+                font-size: 12.5px;
+            }
+            .secondsection{
+                margin: inherit;
+                height: 220vh;;
+            }
+            .secondsection h1{
+                margin: 5px;
+            }
+            
+            .s_section{
+                height: 135vh!important;
+            
+            }
+            #a{
+                width: 90vw;
+            }
+            .c_right-head{
+                font-size: 30px !important;
+            }
+            .c_left-section{
+                width: 80vw;
+
+            }
+            
+        }
+        @media screen and (max-width: 370px){
+            .s_section{
+                height: 150vh!important;            
+            }
+            
+        }
+        @media screen and (max-width: 340px){
+            .s_section{
+                height: 165vh!important;            
+            }
+            .text-gray{
+                font-size: 11px;
+            }
+            
+        }
+        @media screen and (max-height: 730px){
+            .secondsection{
+                height: 220vw;
+
+            }
+            .a_section{
+                height: 130vw;
+
+            }
+            .s_section{
+                height: 150vw;
+            }
+            .c_section{
+                height: 110vw;
+            }
+        }
+        </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Vishal's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    <li><a href="#a">About </a></li>
+                    <li><a href="#s">Services </a></li>
+                    <li><a href="#p">Project </a></li>
+                    <li><a href="#c">Contact </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                <div>
+
+                    Hi , My name is <span class="purple">Vishal</span>
+                </div>
+                <div>and I am a passionate             <br>
+                    <span id="element" class="purple"></span>
+                </div>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github </button>
+                </div>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png" alt="">
+            </div>
+        </section> 
+
+        <hr>
+        <section class="secondsection">
+            <div class="a_about" >
+
+                <span class="text-gray">What I have done so far</span>
+                <h1>Work Experience</h1>
+            </div>
+
+            <div class="box">
+                
+                <div class="vertical">
+                    <img src="html_img.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="css_img.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        CSS Developer 
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="bg.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="bg.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="bg.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+                <div class="vertical">
+                    <img src="bg.png" alt="" class="image-top">
+                    <div class="vertical-title">
+                        HTML Developer (2010-2012)
+                    </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto totam aspernatur ipsa dolores ut nisi numquam eius ipsam iure earum.
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <hr id="a">
+        <div class="a_about"  ><p class="text-gray">A little bit about me</p><h1 class="p_heading">About Me<h1></div>
+        <section class="a_section">
+            <div class="a_left-section">
+                <img src="m.png" alt="">
+            </div>
+            <div class="a_right-section">
+                <div class="a_right-head">
+                    About
+                </div>
+                <div class="a_right-head2">
+                    Developer & Designer
+                </div>
+                <div class="a_right-desc">
+                    I am a front-end web developer . I can provide clean code and pixel perfect design . I also make the website more & more interactive  with web animations . I can provide clean code and pixel perfect design . I also make the website more & more interactive  with web animations . A responsive design makes your website accessible to all users , regardless of their device . 
+                </div>
+                <div class="a_right-desc">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate incidunt molestiae dolorem est ad reprehenderit nesciunt earum maiores aut, labore modi ipsa aperiam tempore officia, nam quibusdam magni alias adipisci possimus! Laborum unde hic vero natus ipsam numquam aut ut est. Rerum sint, dicta exercitationem corrupti veniam excepturi sequi neque beatae omnis, minus, perferendis quasi. Facilis fuga at dicta sed!
+                </div>
+                <div class="a_right-end">
+                    <button class="a_btn"><a href="/contact.html">Lets Talk</a></button>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <hr id="s">
+        <div class="a_about">
+            
+            <p class="text-gray">I offer the full spectrum of services to help org's work better.</p>
+            <div class="p_heading">Service</div>
+        </div>
+        <section class="s_section" >
+            <!-- <div class="s_top"><h1>What i Do</h1> -->
+            <div class="s_context">
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div>
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div>
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div><br>
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div>
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div>
+                <div class="s"><img src="emoji1.jpg" alt="" class="s_service_img">
+                    <h3 class="s_service_h">Web Design</h3>
+                    <p class="s_service_d">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio commodi voluptatibus culpa soluta dolore nihil id? Assumenda architecto fugit quisquam nobis non aspernatur, repellat unde aperiam iste nemo accusantium eos?</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <hr id="c">
+        <div class="a_about" >
+            
+            <p class="text-gray">Get in Touch</p>
+            <div class="p_heading">Contact</div>
+        </div>
+        <section class="c_section">
+            <div class="c_left-section">
+                <div class="c_left-head">
+                    Let's chat
+                </div>
+                <div class="c_left-para1">
+                    <p>Whether you have a question , want to start a project or simply want to connect .</p> 
+                </div>
+                <div class="c_left-para2">
+                    <p>Feel free to send me a message in the contact form</p>
+                </div>
+
+            </div>
+            <div class="c_right-section">
+                <div class="right-head">
+                    Contact
+                </div>
+                <div class="c_form">
+                    <p>*Required</p>
+                    <form action="" class="c_full-form">
+                        <input type="text" placeholder="Name*"  class="contact-form" >
+                        <input type="text" placeholder="Email*" class="contact-form">
+                        <input type="text" placeholder="Company" class="contact-form">
+                        <input type="text" placeholder="Phone*" class="contact-form">
+                        <textarea name="" id="a" cols="40" rows="10" placeholder="Type your Message" class="contact-form"></textarea>
+                        <hr>
+                        <button type="submit" class="c_submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Vishal's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+                
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+            <div class="footer-rights">
+                Copyright &#169 www.vishalportfolio.com | All rights reserved
+            </div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Graphic Designer','Web Designer','Video Editor'],
+          typeSpeed: 50,
+        });
+      </script>
+
+</body>
+
+</html>
